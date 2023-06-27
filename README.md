@@ -1,11 +1,11 @@
-# How to install (Do this first!)
+# How to install (do this first!)
 1. Download the script [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe)
 2. Run the script (three extra files will be created: `ViGEmWrapper.dll`, `fishinglog.txt` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
    * You may have to press "More info" and then "Run anyway" if you get the "Windows protected your PC" prompt
 3. Run `ViGEmBus_1.21.442_x64_x86_arm64.exe` to install ViGEmBus (this is a virtual gamepad emulator)
 
 You have now installed the script!
-# How to use (Do this second!)
+# How to use (do this second!)
 1. Ensure you have these settings:
    * Window mode: "Windowed"
    * Resolution: 1280x720
