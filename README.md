@@ -25,4 +25,5 @@ You have now installed the script!
 - F4 to start fishing
 - F3 to pause the script (to do public events, or whatever)
 - F2 to close the script
-# For support: [https://discord.gg/KGyjysA5WY](https://discord.gg/KGyjysA5WY)
+# For support join here:
+### [Destiny 2 - Macros, Scripts and Kisses](https://discord.gg/KGyjysA5WY)
