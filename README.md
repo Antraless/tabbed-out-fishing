@@ -1,3 +1,4 @@
+# How to use
 ## How to install
 1. Download the script `link here soon`
 2. Run the script (two extra files will be created: `ViGEmWrapper.dll` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
