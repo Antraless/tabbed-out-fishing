@@ -498,7 +498,7 @@ F4::
 	loop {
 		loop {
 			WinGetPos, x, y, w, h, ahk_exe destiny2.exe
-			if (w > 1310 or h > 840) {
+			if (w > 1315 or h > 840) {
 				msgbox,0x30,Antra's Fishing Script, Destiny 2 is not set at (or near) 720p!`n`nFor support join: https://discord.gg/KGyjysA5WY
 				reload
 			}
