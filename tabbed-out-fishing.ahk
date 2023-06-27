@@ -502,7 +502,7 @@ F4::
 				msgbox,0x30,Antra's Fishing Script, Destiny 2 is not set at (or near) 720p!`n`nFor support join: https://discord.gg/KGyjysA5WY
 				reload
 			}
-			PixelCount:=scan.PixelCountregion(5987163,x+553,y+515,50,75) ; look for the grey surrounding the x
+			PixelCount:=scan.PixelCountregion(5987163,x+553,y+515,100,100) ; look for the grey surrounding the x
 			if (PixelCount < 6) {
 				fails++
 				FileAppend, "X" could not be found on the screen! This may not be an issue but for support join: https://discord.gg/KGyjysA5WY`n, fishinglog.txt
