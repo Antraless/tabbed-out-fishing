@@ -6,7 +6,7 @@
 
 You have now installed the script!
 # How to use (do this second!)
-1. Ensure you have these settings:
+1. Ensure you have these in-game settings:
    * Window mode: "Windowed"
    * Resolution: 1280x720
    * Brightness: 7
