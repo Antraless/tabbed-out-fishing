@@ -14,7 +14,7 @@ You have now installed the script!
 3. Look in the top left of Destiny 2
 4. **Once you have begun fishing, do not tab back into Destiny 2 until you want to finish fishing!**
 # Important Notes
-- Destiny 2 must be in English or a language where words are smaller than in English (sorry germans)
+- Destiny 2 must be in English or a language where words are smaller than in English (sorry Germans)
    * You may also join the Discord and ask for a custom version to support your language
 - The screen scanner needs a view of where the "x" appears. Destiny 2 does not need to be active, though.
    * You can put it on any monitor!
