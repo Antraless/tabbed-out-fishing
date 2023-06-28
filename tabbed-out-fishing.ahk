@@ -486,10 +486,10 @@ F4::
 	start = 1 ; for changing gui state
 	fish = 0 ; for gui 
 	fails = 0 ; for when the pond moves
-	controller.Buttons.B.SetState(true) ; crouch spam a bit to make sure D2 is in xbox controller mode
+	controller.Buttons.B.SetState(true) ; crouch a bit to make sure D2 is in xbox controller mode
 	sleep 50
 	controller.Buttons.B.SetState(false)
-	sleep 1500
+	sleep 800
 	controller.Buttons.B.SetState(true)
 	sleep 50
 	controller.Buttons.B.SetState(false)
