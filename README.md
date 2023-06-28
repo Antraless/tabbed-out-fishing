@@ -15,6 +15,7 @@ You have now installed the script!
 4. **Once you have begun fishing, do not tab back into Destiny 2 until you want to finish fishing!**
 # Important Notes
 - Destiny 2 must be in English or a language where words are smaller than in English (sorry germans)
+   * You may also join the Discord and ask for a custom version to support your language
 - Destiny 2 must be visible on your "main" monitor (you can set any of your monitors to be the main one in windows settings)! 
    * The screen scanner needs a view of where the "x" appears. Destiny 2 does not need to be active, though.
 - Moving the Destiny 2 window may require you to restart (F3) the script.
