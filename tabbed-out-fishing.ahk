@@ -203,7 +203,7 @@ class ViGEmTarget {
 		this.Instance := ViGEmWrapper.CreateInstance(this.helperClass)
 		
 		if (this.Instance.OkCheck() != "OK"){
-			msgbox ViGEmWrapper.dll failed to load!
+			msgbox ViGEmWrapper.dll failed to load! Did you install ViGEmBus_1.21.442_x64_x86_arm64.exe?
 			ExitApp
 		}
 	}
@@ -489,7 +489,7 @@ F4::
 	controller.Buttons.B.SetState(true) ; crouch spam a bit to make sure D2 is in xbox controller mode
 	sleep 50
 	controller.Buttons.B.SetState(false)
-	sleep 50
+	sleep 1500
 	controller.Buttons.B.SetState(true)
 	sleep 50
 	controller.Buttons.B.SetState(false)
@@ -515,7 +515,7 @@ F4::
 			}
 			if (fails > 3000) { ; 3000 fails = roughly 1 minute (50~ loops per second if you want a custom fail timer)
 				axis := 10
-				loop { ; iterate through axis on LX and LY to move around to pick up fish
+				loop { ; iterate through axis on LX and LY to move around to pick up fish (if not dead)
 					controller.Axes.LX.SetState(axis)
 					controller.Axes.LY.SetState(axis)
 					sleep 500
