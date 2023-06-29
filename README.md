@@ -11,6 +11,7 @@ You have now installed the script!
    * Resolution: 1280x720
    * Brightness: 7
    * Language: English
+   * Wind impulse: Off/Disabled
 2. Open the script `tabbed-out-fishing.exe`
 3. Look in the top left of Destiny 2
 4. **Once you have begun fishing, do not tab back into Destiny 2 until you want to finish fishing!**
