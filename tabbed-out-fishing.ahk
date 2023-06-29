@@ -502,7 +502,7 @@ F4::
 				msgbox,0x30,Antra's Fishing Script, Destiny 2 is not set at (or near) 720p!`n`nFor support join: https://discord.gg/KGyjysA5WY
 				reload
 			}
-			PixelCount:=scan.PixelCountregion(5987163,x+553,y+515,100,100) ; look for the grey surrounding the x
+			PixelCount:=scan.PixelCountregion(5987163,x+553,y+515,80,80) ; look for the grey surrounding the x
 			if (PixelCount < 6) {
 				fails++
 				FileAppend, "X" could not be found on the screen! This may not be an issue but for support join: https://discord.gg/KGyjysA5WY`n, fishinglog.txt
@@ -527,7 +527,7 @@ F4::
 				}
 				controller.Axes.LX.SetState(50) ; 50 = neutral aka not moving
 				controller.Axes.LY.SetState(50)
-				msgbox,0x30,Antra's Fishing Script, Fishing pond moved or x could not be found for roughly 5 minutes! Tried to move around to pick up fish and paused script.`n`nIf you were on Nessus, you likely died and lost everything. RIP.`n`nIf something seems wrong, find support here: https://discord.gg/KGyjysA5WY
+				msgbox,0x30,Antra's Fishing Script, Fishing pond moved or x could not be found for roughly 1 minute! Tried to move around to pick up fish and paused script.`n`nIf you were on Nessus, you likely died and lost everything. RIP.`n`nIf something seems wrong, find support here: https://discord.gg/KGyjysA5WY
 				reload
 			}
 		}
