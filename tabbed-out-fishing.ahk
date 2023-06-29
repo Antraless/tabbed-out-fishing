@@ -450,7 +450,7 @@ WinActivate, ahk_exe destiny2.exe ; focus D2 upon opening script
 customcolor := "000000" ; literally doesnt matter what this is set to, it is made transparent later
 gui +lastfound +alwaysontop -caption +toolwindow ; all just to make it not disappear/clickable/draggable
 gui, color, %customcolor% ; nothing here matters
-gui, font, s32, verdana ; text style
+gui, font, s32, q5, verdana ; text style
 gui, add, text, vmytext cwhite, XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ; resolution of gui determined by X size (lol)
 winset, transcolor, %customcolor% 255 ; and finally make the gui background transparent
 
@@ -464,11 +464,11 @@ updategui:
 		gxx := gx-30 ; for some reason gx is offset? whatever, fix it here
 		if (start = 0) AND winactive("Destiny 2") {
 			gui, show, x%gxx% y%gy% noactivate 
-			guicontrol,, mytext, F2 to close, F4 to start fishing`nFor support join: https://discord.gg/KGyjysA5WY
+			guicontrol,, mytext, F2 close, F4 start fishing, F8 center window`nFor support join: https://discord.gg/KGyjysA5WY
 		} 
 		else if (start = 1) {
 			gui, show, x%gxx% y%gy% noactivate 
-			guicontrol,, mytext, F2 to close, F3 to pause fishing`nFish caught this run: %fish%
+			guicontrol,, mytext, F2 close, F3 pause`nFish caught: %fish%
 		}
 		else {
 			gui, hide
@@ -527,7 +527,7 @@ F4::
 				}
 				controller.Axes.LX.SetState(50) ; 50 = neutral aka not moving
 				controller.Axes.LY.SetState(50)
-				msgbox,0x30,Antra's Fishing Script, Fishing pond moved or x could not be found for roughly 1 minute! Tried to move around to pick up fish and paused script.`n`nIf you were on Nessus, you likely died and lost everything. RIP.`n`nIf something seems wrong, find support here: https://discord.gg/KGyjysA5WY
+				msgbox,0x30,Antra's Fishing Script, Fishing pond moved or x could not be found for roughly 1 minute! Tried to move around to pick up fish and paused script.`n`nIf you were on Nessus, you likely died and lost some fish. RIP.`n`nIf something seems wrong, find support here: https://discord.gg/KGyjysA5WY
 				reload
 			}
 		}
@@ -552,4 +552,9 @@ F4::
 		num++
 	}
 }
+F8::
+{
+    WinGetPos,,, Width, Height, ahk_exe destiny2.exe
+    WinMove, ahk_exe destiny2.exe,, (A_ScreenWidth/2)-(Width/2), (A_ScreenHeight/2)-(Height/2)
+	}
 ; with <3 from Antra (555 lines!)
