@@ -14,6 +14,8 @@ You have now installed the script!
 2. Open the script `tabbed-out-fishing.exe`
 3. Look in the top left of Destiny 2
 4. **Once you have begun fishing, do not tab back into Destiny 2 until you want to finish fishing!**
+
+Once you begin fishing the script will first crouch. That is normal.
 # Important Notes
 - The screen scanner needs a view of where the "x" appears. Destiny 2 does not need to be active, though.
    * You can put it on any monitor!
