@@ -1,10 +1,7 @@
 # How to install (do this first!)
 1. Download the script [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe)
 2. Run the script (three extra files will be created: `ViGEmWrapper.dll`, `fishinglog.txt` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
-   * Windows 10: you may have to press "More info" and then "Run anyway" if you get the "Windows protected your PC" prompt
-   * Windows 11: you may have to right click the .exe and select "properties". Then, check "unblock"
 3. Run `ViGEmBus_1.21.442_x64_x86_arm64.exe` to install ViGEmBus
-
 You have now installed the script!
 # How to use (do this second!)
 1. Ensure you have these in-game settings:
@@ -14,7 +11,8 @@ You have now installed the script!
    * Wind impulse: Off
 2. Open the script `tabbed-out-fishing.exe`
 3. Open Destiny 2, look in the top left
-4. Once you have begun fishing, do not tab back into Destiny 2 until you want to stop fishing
+   * You may have to run the script as Administrator if the keybinds do not work.
+5. Once you have begun fishing, do not tab back into Destiny 2 until you want to stop fishing
 
 Once you begin fishing the script will first crouch. That is normal. Good luck!
 # Important Notes
