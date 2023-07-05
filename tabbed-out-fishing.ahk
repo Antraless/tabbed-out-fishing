@@ -1,5 +1,5 @@
 ;####################
-; My discord is antrament - this is a server with more of my shit: https://discord.gg/KGyjysA5WY
+; My discord is antrament - this is a server with more macro/script shit + support: https://discord.gg/KGyjysA5WY
 ;####################
 
 #SingleInstance, Force
@@ -198,12 +198,11 @@ class ViGEmTarget {
 	controllerClass := ""
 
 	__New(){
-		;~ this.asm := CLR_LoadLibrary(A_LineFile "\..\ViGEmWrapper.dll")
 		ViGEmWrapper.Init()
 		this.Instance := ViGEmWrapper.CreateInstance(this.helperClass)
 		
 		if (this.Instance.OkCheck() != "OK"){
-			msgbox ViGEmWrapper.dll failed to load! Did you install ViGEmBus_1.21.442_x64_x86_arm64.exe?
+			msgbox,0x30,Antra's Fishing Script, ViGEmWrapper.dll failed to load!`n`nIf you unzipped ViGEmWrapper.dll, that corrupted it. Delete ViGEmWrapper.dll and then run tabbed-out-fishing. The script will automatically download a new ViGEmWrapper.dll for you.`n`nOtherwise, something is horribly wrong. Ask for help here: https://discord.gg/KGyjysA5WY
 			ExitApp
 		}
 	}
@@ -445,7 +444,7 @@ class ShinsImageScanClass {
 	}
 }
 controller := new ViGEmXb360() ; make da virtual controlla
-scan := New ShinsImageScanClass ; make da scanny scanner from the class above
+scan := New ShinsImageScanClass() ; make da scanny scanner from the class above
 WinActivate, ahk_exe destiny2.exe ; focus D2 upon opening script
 customcolor := "000000" ; literally doesnt matter what this is set to, it is made transparent later
 gui +lastfound +alwaysontop -caption +toolwindow ; all just to make it not disappear/clickable/draggable
@@ -464,7 +463,7 @@ updategui:
 		gxx := gx-30 ; for some reason gx is offset? whatever, fix it here
 		if (start = 0) AND winactive("Destiny 2") {
 			gui, show, x%gxx% y%gy% noactivate 
-			guicontrol,, mytext, F2 close, F4 start fishing, F8 center window`nFor support join: https://discord.gg/KGyjysA5WY
+			guicontrol,, mytext, F2 close, F4 start fishing, F8 center window`nSupport + more scripts: https://discord.gg/KGyjysA5WY
 		} 
 		else if (start = 1) {
 			gui, show, x%gxx% y%gy% noactivate 
@@ -484,6 +483,7 @@ F3::reload
 F4::
 {	
 	start = 1 ; for changing gui state
+	FileAppend, Started script`n, fishinglog.txt
 	fish = 0 ; for gui 
 	fails = 0 ; for when the pond moves
 	controller.Buttons.B.SetState(true) ; crouch a bit to make sure D2 is in xbox controller mode
@@ -502,18 +502,15 @@ F4::
 				msgbox,0x30,Antra's Fishing Script, Destiny 2 is not set at (or near) 720p!`n`nFor support join: https://discord.gg/KGyjysA5WY
 				reload
 			}
-			PixelCount:=scan.PixelCountregion(5987163,x+553,y+515,80,80) ; look for the grey surrounding the x
-			if (PixelCount < 6) {
+			if (scan.PixelCountregion(0x5B5B5B,x+553,y+515,100,100) < 4) {
 				fails++
-				FileAppend, "X" could not be found on the screen! This may not be an issue but for support join: https://discord.gg/KGyjysA5WY`n, fishinglog.txt
-			}
-			else {
+			} else {
 				sleep, 10
 				fails = 0
-				FileAppend, "X" found on screen!`n, fishinglog.txt
 				break
 			}
 			if (fails > 3000) { ; 3000 fails = roughly 1 minute (50~ loops per second if you want a custom fail timer)
+				FileAppend, 3000 fails!`n, fishinglog.txt
 				axis := 10
 				loop { ; iterate through axis on LX and LY to move around to pick up fish (if not dead)
 					controller.Axes.LX.SetState(axis)
@@ -527,7 +524,7 @@ F4::
 				}
 				controller.Axes.LX.SetState(50) ; 50 = neutral aka not moving
 				controller.Axes.LY.SetState(50)
-				msgbox,0x30,Antra's Fishing Script, Fishing pond moved or x could not be found for roughly 1 minute! Tried to move around to pick up fish and paused script.`n`nIf you were on Nessus, you likely died and lost some fish. RIP.`n`nIf something seems wrong, find support here: https://discord.gg/KGyjysA5WY
+				msgbox,0x30,Antra's Fishing Script, Fishing pond moved or x could not be found for roughly 1 minute! Tried to move around to pick up fish and paused script.`n`nIf you were on Nessus, you likely died and lost some fish. RIP.`n`nIf something seems wrong, find support here: https://discord.gg/KGyjysA5WY or... just join to make the number go up. That'd be nice!
 				reload
 			}
 		}
@@ -556,5 +553,6 @@ F8::
 {
     WinGetPos,,, Width, Height, ahk_exe destiny2.exe
     WinMove, ahk_exe destiny2.exe,, (A_ScreenWidth/2)-(Width/2), (A_ScreenHeight/2)-(Height/2)
-	}
-; with <3 from Antra (555 lines!)
+	FileAppend, Centred window`n, fishinglog.txt
+}
+; with <3 from Antra
