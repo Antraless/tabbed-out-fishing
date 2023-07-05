@@ -23,7 +23,7 @@ You have now installed the script!
    * This is necessary because the script will automatically switch to Discord to prevent the virtual controller being interrupted. You can change this by downloading the source .ahk file [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.ahk). Then, change line 497 to focus the .exe of your choice e.g. `chrome.exe` or remove the line all together to not tab out anymore
    * If you want to run the .ahk file, you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
 - Huge credit to angeru_san, leopoldprime, .spawnova, Ahdem and savageplayz_ for helping me out during testing!
-## Less important notes (if something is wrong here, ask for help!)
+## Less important notes (all of these things should be true, if not, ask for help)
 - Works on any planet
 - Perfect catches every time
 - Destiny 2 can be on any monitor
