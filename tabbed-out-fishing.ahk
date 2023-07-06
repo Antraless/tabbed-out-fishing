@@ -502,7 +502,7 @@ F4::
 				msgbox,0x30,Antra's Fishing Script, Destiny 2 is not set at (or near) 720p!`n`nFor support join: https://discord.gg/KGyjysA5WY
 				reload
 			}
-			if (scan.PixelCountregion(0x5B5B5B,x+553,y+515,100,100) < 4) {
+			if (scan.PixelCountregion(0x5B5B5B,x+500,y+500,200,200) < 4) {
 				fails++
 			} else {
 				sleep, 10
