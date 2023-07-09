@@ -3,6 +3,7 @@
    * To run the .ahk file you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
 2. Run the .exe or .ahk (three extra files will be created: `ViGEmWrapper.dll`, `fishinglog.txt` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
 3. Run `ViGEmBus_1.21.442_x64_x86_arm64.exe` to install ViGEmBus
+
 You have now installed the script!
 # How to use (do this second!)
 1. Ensure you have these in-game settings:
