@@ -1,5 +1,5 @@
 # How to install (do this first!)
-1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/git-cloud-storage/tabbed-out-fishing.ahk)
+1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk)
    * To run the .ahk file you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
 2. Run the .exe or .ahk (three extra files will be created: `ViGEmWrapper.dll`, `fishinglog.txt` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
 3. Run `ViGEmBus_1.21.442_x64_x86_arm64.exe` to install ViGEmBus
@@ -21,7 +21,7 @@ You have now installed the script!
    * You can put it on any monitor!
 - Moving the Destiny 2 window may require you to restart (F3) the script and/or change your resolution back to 1280x720
 - **By default must have Discord running on your PC**
-   * This is necessary because the script will automatically switch to Discord to prevent the virtual controller being interrupted. You can change this by downloading the source .ahk file [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.ahk). Then, change line 497 to focus the .exe of your choice e.g. `chrome.exe` or remove the line all together to not tab out anymore
+   * This is necessary because the script will automatically switch to Discord to prevent the virtual controller being interrupted. You can change this by downloading the source .ahk file [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk). Then, change line 497 to focus the .exe of your choice e.g. `chrome.exe` or remove the line all together to not tab out anymore
    * If you want to run the .ahk file, you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
 - Huge credit to angeru_san, leopoldprime, .spawnova, Ahdem and savageplayz_ for helping me out during testing!
 ## Less important notes (all of these things should be true, if not, ask for help)
