@@ -5,12 +5,15 @@ Using this script, you may tab out while fishing. The "x" that appears on screen
    * To run the .ahk file you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
 2. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk` (whichever you downloaded) (three extra files will be created: `ViGEmWrapper.dll`, `fishinglog.txt` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
 3. Run `ViGEmBus_1.21.442_x64_x86_arm64.exe` to install ViGEmBus
+
 You have now installed the script!
 # How to use (do this second!)
 1. Ensure that your in-game brightness is 7
+   * You may have to turn off "HDR", "Chromatic Aberration" and "Wind Impulse" if your catches are inconsistent
 2. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk`
 3. Open Destiny 2, go to a fishing pond and press F4 when you see the fishing prompt
    * You may have to run the script as Administrator if the keybinds do not work
+
 The script should then begin fishing!
 # Important Notes
 - The weapon switching is to ensure that the game is in controller mode rather than keyboard and mouse
