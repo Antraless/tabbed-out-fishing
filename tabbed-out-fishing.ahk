@@ -13,7 +13,7 @@ else  {
 	UrlDownloadToFile, https://github.com/Antraless/tabbed-out-fishing/raw/main/ViGEmBus_1.21.442_x64_x86_arm64.exe, ViGEmBus_1.21.442_x64_x86_arm64.exe
 	msgbox,0x40,Antra's Fishing Script, Attempting to download required files. If they do not appear join https://discord.gg/KGyjysA5WY for support.
 	if (errorlevel = 1) {
-		FileAppend, ViGEmWrapper.dll not found so attempted to download it and ViGEmBus_1.21.442_x64_x86_arm64.exe but something went wrong!`n, fishinglog.txt
+		FileAppend, ViGEmWrapper.dll not found so attempted to download it and ViGEmBus_1.21.442_x64_x86_arm64.exe but something went wrong! Join https://discord.gg/KGyjysA5WY for support.`n, fishinglog.txt
 		msgbox,0x30,Antra's Fishing Script, Something went wrong while trying to install required files. Please join https://discord.gg/KGyjysA5WY for support.`n`nThe script will now close itself.
 	}
 	else {
@@ -109,8 +109,6 @@ CLR_Start(Version="")
 	return RtHst
 }
 
-
-
 CLR_GetDefaultDomain()
 {
 	static defaultDomain := 0
@@ -165,8 +163,6 @@ CLR_GUID(ByRef GUID, sGUID)
 	VarSetCapacity(GUID, 16, 0)
 	return DllCall("ole32\CLSIDFromString", "wstr", sGUID, "ptr", &GUID) >= 0 ? &GUID : ""
 }
-
-
 ; ==========================================================
 ;                     AHK-ViGEm-Bus
 ;          https://github.com/evilC/AHK-ViGEm-Bus
@@ -298,6 +294,7 @@ class ViGEmXb360 extends ViGEmTarget {
 		}
 	}
 }
+
 ; ==========================================================
 ;                  ShinsImageScanClass
 ;      https://github.com/Spawnova/ShinsImageScanClass
@@ -443,14 +440,19 @@ class ShinsImageScanClass {
 				DllCall("LoadLibrary", "Str", v) 
 	}
 }
+
+; ==========================================================
+;                  The script (oh no)
+;      https://discord.gg/KGyjysA5WY https://github.com/Antraless/tabbed-out-fishing
+; ==========================================================
 controller := new ViGEmXb360() ; make da virtual controlla
 scan := New ShinsImageScanClass() ; make da scanny scanner from the class above
 WinActivate, ahk_exe destiny2.exe ; focus D2 upon opening script
 customcolor := "000000" ; literally doesnt matter what this is set to, it is made transparent later
 gui +lastfound +alwaysontop -caption +toolwindow ; all just to make it not disappear/clickable/draggable
 gui, color, %customcolor% ; nothing here matters
-gui, font, s32, q5, verdana ; text style
-gui, add, text, vmytext cwhite, XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ; resolution of gui determined by X size (lol)
+gui, font, s28, q5, verdana ; text style
+gui, add, text, vtext cwhite, XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ; resolution of gui determined by X size (lol)
 winset, transcolor, %customcolor% 255 ; and finally make the gui background transparent
 
 ;#############
@@ -460,14 +462,31 @@ gosub, updategui
 updategui:
 	if WinExist("Destiny 2") {
 		WinGetPos, gx, gy, w, h, ahk_exe destiny2.exe
-		gxx := gx-30 ; for some reason gx is offset? whatever, fix it here
+		gxx := gx-25  
+		gyy := gy+15 ; accounting for the fact that the windows menu shit adds to the dimensions
 		if (start = 0) AND winactive("Destiny 2") {
-			gui, show, x%gxx% y%gy% noactivate 
-			guicontrol,, mytext, F2 close, F4 start fishing, F8 center window`nSupport + more scripts: https://discord.gg/KGyjysA5WY
+			gui, show, x%gxx% y%gyy% noactivate 
+			guicontrol,, text, F2 close, F4 start fishing, F8 center window`nsupport + more scripts: discord.gg/KGyjysA5WY
 		} 
-		else if (start = 1) {
-			gui, show, x%gxx% y%gy% noactivate 
-			guicontrol,, mytext, F2 close, F3 pause`nFish caught: %fish%
+		else if (start = 5) {
+			gui, show, x%gxx% y%gyy% noactivate 
+			guicontrol,, text, F2 close, F3 pause`nTrying to find the X...`nIf you see this for a long time, something is wrong
+		}
+		else if (start = 4) {
+			gui, show, x%gxx% y%gyy% noactivate 
+			guicontrol,, text, F2 close, F3 pause`nX not found for roughly 1 minute!`nPaused script, jiggling to prevent afk kick.
+		}
+;		else if (start = 3) AND winactive("Destiny 2") {
+;			gui, show, x%gxx% y%gyy% noactivate 
+;			guicontrol,, text, F2 close, F3 pause`nCould not determine brightness. Please F3 to retry
+;		}
+;		else if (start = 2) AND winactive("Destiny 2") {
+;			gui, show, x%gxx% y%gyy% noactivate 
+;			guicontrol,, text, F2 close, F3 pause`nDetermining brightness...
+;		}
+		else if (start = 1) AND winactive("Destiny 2") {
+			gui, show, x%gxx% y%gyy% noactivate 
+			guicontrol,, text, F2 close, F3 pause`nFish caught: %fish%
 		}
 		else {
 			gui, hide
@@ -478,81 +497,112 @@ updategui:
 	}
 return 
 
-F2::exitapp
-F3::reload
-F4::
-{	
-	start = 1 ; for changing gui state
-	FileAppend, Started script`n, fishinglog.txt
-	fish = 0 ; for gui 
-	fails = 0 ; for when the pond moves
-	controller.Buttons.B.SetState(true) ; crouch a bit to make sure D2 is in xbox controller mode
-	sleep 50
-	controller.Buttons.B.SetState(false)
-	sleep 800
-	controller.Buttons.B.SetState(true)
-	sleep 50
-	controller.Buttons.B.SetState(false)
-	sleep 50
-	WinActivate, ahk_exe Discord.exe ; focus another window that is not destiny 2 (Discord.exe by default)
+;determine_brightness:
+;start = 2
+;	loop {
+;		controller.buttons.y.setstate(true)
+;		sleep 50
+;		controller.buttons.y.setstate(false)
+;		; all hex values of the grey surrounding the x from 7 to 1 brightness
+;		loop, 10 {
+;		hexvalues := ["0x5B5B5B", "0x555555", "0x4D4D4D", "0x444444", "0x393939", "0x2C2C2C", "0x212121"]
+;			for index, hex in hexvalues {
+;				if (scan.pixelcountregion(hex, startwidth, startheight, regionwidth, regionheight) > threshold) {
+;					start = 5
+;					gosub, search_for_x
+;				}
+;			}
+;		}
+;		start = 3
+;	}
+;return
+
+search_for_x:
 	loop {
-		loop {
-			WinGetPos, x, y, w, h, ahk_exe destiny2.exe
-			if (w > 1315 or h > 840) {
-				msgbox,0x30,Antra's Fishing Script, Destiny 2 is not set at (or near) 720p!`n`nFor support join: https://discord.gg/KGyjysA5WY
-				reload
-			}
-			if (scan.PixelCountregion(0x5B5B5B,x+500,y+500,200,200) < 4) {
-				fails++
-			} else {
-				sleep, 10
-				fails = 0
-				break
-			}
-			if (fails > 3000) { ; 3000 fails = roughly 1 minute (50~ loops per second if you want a custom fail timer)
-				FileAppend, 3000 fails!`n, fishinglog.txt
-				axis := 10
-				loop { ; iterate through axis on LX and LY to move around to pick up fish (if not dead)
-					controller.Axes.LX.SetState(axis)
-					controller.Axes.LY.SetState(axis)
-					sleep 500
-					axis += 10
-					if (axis = 100){
-						sleep 1000
-						break
-					}
-				}
-				controller.Axes.LX.SetState(50) ; 50 = neutral aka not moving
-				controller.Axes.LY.SetState(50)
-				msgbox,0x30,Antra's Fishing Script, Fishing pond moved or x could not be found for roughly 1 minute! Tried to move around to pick up fish and paused script.`n`nIf you were on Nessus, you likely died and lost some fish. RIP.`n`nIf something seems wrong, find support here: https://discord.gg/KGyjysA5WY or... just join to make the number go up. That'd be nice!
-				reload
-			}
+		if (scan.pixelcountregion(0x5B5B5B, startwidth, startheight, regionwidth, regionheight) < threshold) {
+			fails++
+			controller.buttons.y.setstate(true)
+			sleep, 10
+			controller.buttons.y.setstate(false)
+		} else {
+			fails = 0
+			gosub, x_found
 		}
-		controller.Buttons.X.SetState(true)
-		Sleep, 800
-		controller.Buttons.X.SetState(false)
-		if mod(num, 2) {
-			fish++
-			FileAppend, Caught a fish! (%fish% this run!)`n, fishinglog.txt
+		if (fails > 3000) {
+			gosub, x_not_found
 		}
-		else { ; anti afk shit, after a throw... jiggle the camera a bit
-			FileAppend, Sending camera inputs (anti afk)`n, fishinglog.txt
-			controller.Axes.RY.SetState(0)
-			Sleep 200
-			controller.Axes.RY.SetState(50)
-			sleep 200
-			controller.Axes.RY.SetState(100)
-			sleep 200
-			controller.Axes.RY.SetState(50)
-			sleep 200
-		}
-		num++
 	}
+return
+
+x_found:
+	controller.buttons.x.setstate(true)
+	sleep 800
+	controller.buttons.x.setstate(false)
+	if mod(num, 2) { ; increase fish count on catch
+		fish++
+	} else { ; anti afk on throw (look up and down quickly)
+		start = 1
+		controller.axes.ry.setstate(0)
+		sleep 100
+		controller.axes.ry.setstate(50)
+		sleep 100
+		controller.axes.ry.setstate(100)
+		sleep 100
+		controller.axes.ry.setstate(50)
+		sleep 100
+	}
+	num++
+	gosub, search_for_x
+return
+
+x_not_found:
+	FileAppend, 3000 fails!`n, fishinglog.txt
+	start = 4 ; update gui
+	axis := 10
+	loop { ; iterate through axis on LX and LY to move around to pick up fish (if not dead)
+		controller.Axes.LX.SetState(axis)
+		controller.Axes.LY.SetState(axis)
+		sleep 500
+		axis += 10
+		if (axis = 100){
+			sleep 1000
+			break
+		}
+	}
+	controller.Axes.LX.SetState(50) ; 50 = neutral aka not moving... to stop moving
+	controller.Axes.LY.SetState(50)
+	loop { ; now just keep looking around to prevent orbit
+		controller.Axes.RY.SetState(0)
+		Sleep 200
+		controller.Axes.RY.SetState(50)
+		sleep 200
+		controller.Axes.RY.SetState(100)
+		sleep 200
+		controller.Axes.RY.SetState(50)
+		sleep 200
+	}
+return
+
+
+f2::exitapp
+f3::reload
+f4::
+{	
+	FileAppend, starting script - for support join: https://discord.gg/KGyjysA5WY`n, fishinglog.txt
+	wingetpos, x, y, w, h, ahk_exe destiny2.exe
+	; why do this here? i dont know, i dont care
+	threshold := 30
+	startwidth := x+(w*0.325)
+	startheight := y+(h*0.55)
+	regionwidth := w*0.35
+	regionheight := h*0.25
+	start = 5
+	hex = "0x5B5B5B"
+	gosub, search_for_x
 }
-F8::
+f8::
 {
     WinGetPos,,, Width, Height, ahk_exe destiny2.exe
     WinMove, ahk_exe destiny2.exe,, (A_ScreenWidth/2)-(Width/2), (A_ScreenHeight/2)-(Height/2)
 	FileAppend, Centred window`n, fishinglog.txt
 }
-; with <3 from Antra
