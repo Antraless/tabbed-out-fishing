@@ -1,36 +1,28 @@
+Using this script, you may tab out while fishing. The "x" that appears on screen must still be visible. It is recommened that you put your Destiny 2 into windowed mode and place it on a monitor you are not using.
+
 # How to install (do this first!)
 1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk) (anti-virus gets mad at the .exe - disable your anti-virus or use the .ahk)
    * To run the .ahk file you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
-2. Run the .exe or .ahk (three extra files will be created: `ViGEmWrapper.dll`, `fishinglog.txt` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
+2. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk` (whichever you downloaded) (three extra files will be created: `ViGEmWrapper.dll`, `fishinglog.txt` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`)
 3. Run `ViGEmBus_1.21.442_x64_x86_arm64.exe` to install ViGEmBus
-
 You have now installed the script!
 # How to use (do this second!)
-1. Ensure you have these in-game settings:
-   * Window mode: "Windowed"
-   * Resolution: 1280x720
-   * Brightness: 7
-   * Wind impulse: Off
-   * Chromatic aberration: Off
-   * HDR: Off
-2. Open the script `tabbed-out-fishing.exe`
-3. Open Destiny 2, look in the top left
-   * You may have to run the script as Administrator if the keybinds do not work.
-4. Once you have begun fishing, do not tab back into Destiny 2 until you want to stop fishing
+1. Ensure that your in-game brightness is 7
+2. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk`
+3. Open Destiny 2, go to a fishing pond and press F4 when you see the fishing prompt
+   * You may have to run the script as Administrator if the keybinds do not work
+The script should then begin fishing!
 # Important Notes
-- The screen scanner needs a view of where the "x" appears. Destiny 2 does not need to be active, though.
-   * You can put it on any monitor!
-- Moving the Destiny 2 window may require you to restart (F3) the script and/or change your resolution back to 1280x720
-- **By default must have Discord running on your PC**
-   * This is necessary because the script will automatically switch to Discord to prevent the virtual controller being interrupted. You can change this by downloading the source .ahk file [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk). Then, change line 497 to focus the .exe of your choice e.g. `chrome.exe` or remove the line all together to not tab out anymore
-   * If you want to run the .ahk file, you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
-- Huge credit to angeru_san, leopoldprime, .spawnova, Ahdem and savageplayz_ for helping me out during testing!
+- The weapon switching is to ensure that the game is in controller mode rather than keyboard and mouse
+- The jiggle up and down is to prevent AFK orbiting
+- Moving the Destiny 2 window may require you to restart (F3) the script
+- Huge credit to `_kreken, leopoldprime, .spawnova, Ahdem and savageplayz_ for helping me out during testing!
 ## Less important notes (all of these things should be true, if not, ask for help)
 - Works on any planet
 - Perfect catches every time
 - Destiny 2 can be on any monitor
 ## Script Keybinds: 
-- F8 to center the window (if D2 gets stuck somewhere in windowed mode)
+- F8 to center the window (for if D2 gets stuck somewhere in windowed mode)
 - F4 to start fishing
 - F3 to pause the script (to do public events, or whatever)
 - F2 to close the script
