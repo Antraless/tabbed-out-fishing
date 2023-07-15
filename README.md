@@ -1,4 +1,4 @@
-Using this script, you may tab out while fishing. The "x" that appears on screen must still be visible. It is recommened that you put your Destiny 2 into windowed mode and place it on a monitor you are not using.
+Using this script, you may tab out while fishing. The "x" that appears on screen must still be visible. It is recommened that you put your Destiny 2 into windowed mode and place it on a monitor you are not using so you can fish and use your pc as normal at the same time with minimal interruption.
 
 # How to install (do this first!)
 1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk) (anti-virus gets mad at the .exe - disable your anti-virus or use the .ahk)
