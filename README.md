@@ -22,7 +22,7 @@ The script should then begin fishing!
 - The jiggle up and down is to prevent AFK orbiting
 - The "x" that appears on screen must still be visible
 - Moving the Destiny 2 window may require you to restart (F3) the script
-- Huge credit to `_kreken, leopoldprime, .spawnova, Ahdem and savageplayz_ for helping me out during testing!
+- Thanks to _kreken, leopoldprime, .spawnova, Ahdem and savageplayz for helping me out during testing!
 ## Less important notes (all of these things should be true, if not, ask for help)
 - Works on any planet
 - Perfect catches every time
