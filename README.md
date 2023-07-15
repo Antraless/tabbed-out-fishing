@@ -1,4 +1,6 @@
-Using this script, you may tab out while fishing. The "x" that appears on screen must still be visible. It is recommened that you put your Destiny 2 into windowed mode and place it on a monitor you are not using so you can fish and use your pc as normal at the same time with minimal interruption.
+This script allows you to tab out while AFK fishing. You do not need to change your keybinds, all instructions are listed below. 
+
+It is recommened that you put your Destiny 2 into windowed mode and place it on a monitor you are not using so you can fish and use your pc as normal at the same time with minimal interruption.
 
 # How to install (do this first!)
 1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk) (anti-virus gets mad at the .exe - disable your anti-virus or use the .ahk)
@@ -11,13 +13,14 @@ You have now installed the script!
 1. Ensure that your in-game brightness is 7
    * You may have to turn off "HDR", "Chromatic Aberration" and "Wind Impulse" if your catches are inconsistent
 2. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk`
-3. Open Destiny 2, go to a fishing pond and press F4 when you see the fishing prompt
+3. Open Destiny 2, go to a fishing pond and press F4 to start fishing when you see the fishing prompt
    * You may have to run the script as Administrator if the keybinds do not work
 
 The script should then begin fishing!
 # Important Notes
 - The weapon switching is to ensure that the game is in controller mode rather than keyboard and mouse
 - The jiggle up and down is to prevent AFK orbiting
+- The "x" that appears on screen must still be visible
 - Moving the Destiny 2 window may require you to restart (F3) the script
 - Huge credit to `_kreken, leopoldprime, .spawnova, Ahdem and savageplayz_ for helping me out during testing!
 ## Less important notes (all of these things should be true, if not, ask for help)
