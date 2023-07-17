@@ -1,7 +1,5 @@
 This script allows you to tab out while AFK fishing. You do not need to change your keybinds, all instructions are listed below. 
 
-It is recommened that you put your Destiny 2 into windowed mode and place it on a monitor you are not using so you can fish and use your pc as normal at the same time with minimal interruption.
-
 # How to install (do this first!)
 1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk) (anti-virus gets mad at the .exe - disable your anti-virus or use the .ahk)
    * To run the .ahk file you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
@@ -21,9 +19,11 @@ The script should then begin fishing!
 # Important Notes
 - The weapon switching is to ensure that the game is in controller mode rather than keyboard and mouse
 - If you have a real controller plugged in, you may have to unplug it
-- The jiggle up and down is to prevent AFK orbiting
+- The jiggle up and down is an anti-AFK measure
 - The "x" that appears on screen must still be visible
 - Moving the Destiny 2 window may require you to restart (F3) the script
+- I recommened that you put your Destiny 2 into windowed mode and place it somewhere out of the way so you can fish and use your pc as normal(ish)
+   * If you do not have a second monitor, you can use your phone with an app like spacedesk
 - Thanks to _kreken, leopoldprime, .spawnova, Ahdem and savageplayz for helping me out during testing!
 ## Less important notes (all of these things should be true, if not, ask for help)
 - Works on any planet
