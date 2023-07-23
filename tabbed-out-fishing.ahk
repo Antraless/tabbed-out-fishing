@@ -571,15 +571,23 @@ x_not_found:
 	}
 	controller.Axes.LX.SetState(50) ; 50 = neutral aka not moving... to stop moving
 	controller.Axes.LY.SetState(50)
-	loop { ; now just keep looking around to prevent orbit
+	loop { ; now just do shit to prevent afk
 		controller.Axes.RY.SetState(0)
-		Sleep 200
+		Sleep 300
 		controller.Axes.RY.SetState(50)
-		sleep 200
+		sleep 300
 		controller.Axes.RY.SetState(100)
-		sleep 200
+		sleep 300
 		controller.Axes.RY.SetState(50)
-		sleep 200
+		sleep 300
+		controller.Axes.LX.SetState(100)
+		sleep 50
+		controller.Axes.LX.SetState(50)
+		sleep 50
+		controller.Axes.LX.SetState(0)
+		sleep 50
+		controller.Axes.LX.SetState(50)
+		sleep 50
 	}
 return
 
