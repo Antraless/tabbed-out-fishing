@@ -2292,20 +2292,17 @@ UpdateOverlay:
         regionHeight := h * 0.25
         
         if (overlay.beginDraw()) {
-            ; Draw different texts based on 'status' variable
+            ; Draw different overlays based on 'status' variable
             switch status {
                 case 0:
                     overlay.drawText("F2 close, F4 start fishing, F8 center window`nsupport + more scripts: discord.gg/KGyjysA5WY", 10, 0, 32, 0xFFFFFFFF, "Courier")
-                
                 case 1:
                     overlay.drawText("F2 close, F3 pause`nTrying to find the X...", 10, 0, 32, 0xFFFFFFFF, "Courier")
                     overlay.drawText("This is the region being searched:", startWidth, startHeight - 60, 32, 0xFFFF0000, "Courier")
                     overlay.drawRectangle(startWidth, startHeight, regionWidth, regionHeight, 0xFFFF0000, 4)
                     overlay.drawText("Your brightness should be 7`nIf this is here for a while, ask for help!", startWidth, startHeight + regionHeight, 32, 0xFFFF0000, "Courier")
-                
                 case 2:
                     overlay.drawText("F2 close, F3 pause`nFish caught: " fish, 10, 0, 32, 0xFFFFFFFF, "Courier")
-                
                 case 3:
                     overlay.drawText("F2 close, F3 pause`nX not found for roughly 1 minute!`nPaused script, jiggling to prevent afk kick.", 10, 0, 32, 0xFFFFFFFF, "Courier")
             }
@@ -2316,14 +2313,14 @@ return
 
 ; SearchForX function - loop to find a specific pixel color ('X') on the game window
 SearchForX:
-    Loop {
+    Loop {	
         if (scan.pixelCountRegion(hex, x + startWidth, y + startHeight, regionWidth, regionHeight) < threshold) {
             fails++
             360Controller.buttons.y.setState(true) ; Simulate pressing the 'Y' button on the controller to ensure the game is in controller mode
-            Sleep, 10
+            Sleep 10
             360Controller.buttons.y.setState(false) ; Release the 'Y' button
         } else {
-            fails = 0
+            fails := 0
             GoSub, XFound ; 'X' found, jump to XFound subroutine
         }
         if (fails > 3000) {
@@ -2334,20 +2331,20 @@ return
 
 ; XFound subroutine - actions to perform when 'X' is found on the game window
 XFound:
-    controller.buttons.x.setState(true) ; Simulate pressing the 'X' button on the controller to throw or catch
+	360Controller.buttons.x.setState(true) ; Simulate pressing the 'X' button on the controller to throw or catch
     Sleep 800
-    controller.buttons.x.setState(false) ; Release the 'X' button
+    360Controller.buttons.x.setState(false) ; Release the 'X' button
     if mod(num, 2) {
         fish++ ; Increment fish count if the 'num' variable is odd i.e. on catch, not throw
     } else {
         Status = 2
-        360Controller.axes.ry.setState(0) ; Set the right analog stick's Y-axis to 0
+        360Controller.axes.ry.setState(0) ; Set the right analog stick's Y-axis to 0 i.e. all the way down
         Sleep 100
-        360Controller.axes.ry.setState(50) ; Set the right analog stick's Y-axis to 50
+        360Controller.axes.ry.setState(50) ; Set the right analog stick's Y-axis to 50 i.e. neutral
         Sleep 100
-        360Controller.axes.ry.setState(100) ; Set the right analog stick's Y-axis to 100
+        360Controller.axes.ry.setState(100) ; Set the right analog stick's Y-axis to 100 i.e. all the way up
         Sleep 100
-        360Controller.axes.ry.setState(50) ; Set the right analog stick's Y-axis to 50
+        360Controller.axes.ry.setState(50) ; Set the right analog stick's Y-axis to 50 i.e. neutral
         Sleep 100
     }
     num++
@@ -2404,8 +2401,8 @@ F4:: ; Pressing F4 will start the fishing process
 FileAppend, starting script - for support join: https://discord.gg/KGyjysA5WY`n, fishinglog.txt
 WinGetPos, x, y, w, h, ahk_exe destiny2.exe
 threshold := 30
-status = 1
-hex = "0x5B5B5B"
+status := 1
+hex := 0x5B5B5B
 GoSub, SearchForX
 
 F8:: ; Pressing F8 will center the game window on the screen
