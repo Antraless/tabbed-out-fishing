@@ -19,9 +19,7 @@ The script should then begin fishing!
 # Notes
 - The weapon switching is to ensure that the game is in controller mode rather than keyboard and mouse mode
 - If you have a real controller plugged in, you may have to unplug it
-- The jiggle up and down is an anti-AFK measure
 - The "x" that appears on screen must be visible
-- If you move the Destiny 2 window, you will need to restart (F3) the script
 - I recommened that you put your Destiny 2 into windowed mode and place it somewhere out of the way so you can fish and use your pc as normal(ish)
    * If you do not have a second monitor, you can use your phone with an app like spacedesk
 - Thanks to _kreken, leopoldprime, .spawnova, Ahdem and savageplayz for helping me out during testing!
