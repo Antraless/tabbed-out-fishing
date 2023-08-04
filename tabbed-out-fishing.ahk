@@ -3358,13 +3358,12 @@ html =
 			<div class="row">
 				<p class="alerttext" id="alert1"></p>
 				<span>
-					<button class="button bigbutton" id="saveButton" type="submit">Save/Reload</button>
+					<button class="button bigbutton" id="closeButton" type="button" onclick="ahk.closeButton(event)">Close Menu</button>
 				</span>
 				<span>
-				<button class="button bigbutton" id="closeButton" type="button" onclick="ahk.closeButton(event)">Close Menu</button>
-			</span>
+					<button class="button bigbutton" id="saveButton" type="submit">Save/Reload</button>
+				</span>
 			</div>
-
 		 	<div class="signature">
 		  		<p>With <i class="much-heart"></i> from <a href="#" onclick="ahk.antraClicked(event)">Antra</a> - <a href="#" onclick="ahk.discordClicked(event)">Join our Discord</a> for support and more scripts!</p>
 	  		</div>
