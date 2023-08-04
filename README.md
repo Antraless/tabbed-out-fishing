@@ -1,4 +1,4 @@
-This script allows you to autonomously fish while not tabbed in to the game, so you may use your pc as normal(ish) while fishing!
+This script fishes for you even when not tabbed in; so you may use your pc as normal(ish) while fishing!
 # How to install (do this first!)
 1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk) (anti-virus gets mad at the .exe - disable your anti-virus or use the .ahk)
    * To run the .ahk file you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
