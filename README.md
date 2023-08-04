@@ -2,12 +2,12 @@
 1. Download the .exe [here](https://github.com/Antraless/tabbed-out-fishing/raw/main/tabbed-out-fishing.exe) or .ahk [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk) (anti-virus gets mad at the .exe - disable your anti-virus or use the .ahk)
    * To run the .ahk file you will need to install [AHK 1.1](https://www.autohotkey.com/download/ahk-install.exe)
 2. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk` (whichever you downloaded) 
-   * Three extra files will be created: `ViGEmWrapper.dll` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`
+   * Two files will be created: `ViGEmWrapper.dll` and `ViGEmBus_1.21.442_x64_x86_arm64.exe`
 3. Run `ViGEmBus_1.21.442_x64_x86_arm64.exe` to install ViGEmBus - once you have done this, you may delete this file.
 
 You have now installed the script!
 # How to use (do this second!)
-1. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk`
+1. Run `tabbed-out-fishing.exe` or `tabbed-out-fishing.ahk` (whichever you went with)
 2. Open Destiny 2, read the overlay for instructions. Open F9 to customise!
    * You may have to run the script as Administrator if the keybinds do not work
 
