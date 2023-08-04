@@ -3732,11 +3732,11 @@ window.addEventListener("beforeunload", function (event) {
 	var inputs = document.querySelectorAll('input[type="text"]');
 	for (var i = 0; i < inputs.length; i++) {
 	  if (inputs[i].id !== inputId && inputs[i].value === value) {
-		document.getElementById('alert2').textContent = "Whatever you are pressing is already another bind.";
+		document.getElementById('alert1').textContent = "Whatever you are pressing is already another bind.";
 		return false;
 	  }
 	}
-	document.getElementById('alert2').textContent = "";
+	document.getElementById('alert1').textContent = "";
 	return true;
   }
   
