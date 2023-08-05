@@ -16,6 +16,7 @@ To tab out, use `alt+tab` after starting the script! Best of luck getting those 
 # Notes
 - If you have a real controller plugged in, you may have to unplug it
 - The "x" that appears on screen must be visible
+- You may have to turn off "HDR", "Chromatic Aberration" and "Wind Impulse" if your catches are inconsistent
 - Thanks to _kreken, leopoldprime, .spawnova, Ahdem and savageplayz for helping me out during testing!
 ## For support join here: [Destiny 2 - Macros, Scripts and Kisses](https://discord.gg/KGyjysA5WY)
 ## Preview image:
