@@ -21,6 +21,3 @@ To tab out, use `alt+tab` after starting the script! Best of luck getting those 
    * F4 to start, F3 to stop, F2 to close.
 - Thanks to _kreken, leopoldprime, .spawnova, Ahdem and savageplayz for helping me out during testing!
 ## For support join here: [Destiny 2 - Macros, Scripts and Kisses](https://discord.gg/KGyjysA5WY)
-## Preview image:
-![Example of use with GUI menu/overlay displayed](https://i.imgur.com/EOuRKdb.jpg)
-_Screenshot showing the GUI menu and overlay while fishing_
