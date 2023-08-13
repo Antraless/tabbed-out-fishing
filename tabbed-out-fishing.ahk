@@ -1,8 +1,10 @@
 ;####################
 ; My discord is antrament - this is a server with more macro/script shit + support: https://discord.gg/KGyjysA5WY
 ;####################
-#Persistent  ; Prevent the script from exiting automatically.
+#Persistent
 #SingleInstance, Force
+SetBatchLines, -1
+Process, Priority,, H
 OnExit, tryingtoleavehuh
 status = 0
 fish = 0
