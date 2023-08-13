@@ -14,11 +14,11 @@ You have now installed the script!
 
 To tab out, use `alt+tab` after starting the script! Best of luck getting those exotics.
 # Notes
+- If you want ONLY fishing functionality, download `tabbed-out-fishing-STRIPPED.exe` or `tabbed-out-fishing-STRIPPED.ahk`.
+   * F4 to start, F3 to stop, F2 to close.
+   * You must be brightness 7 for the stripped script. It contains no anti-afk, rebinding, overlay, tracking, auto-pickup, etc. - Just fishing!
 - If you have a real controller plugged in, you may have to unplug it
 - The "x" that appears on screen must be visible
 - You may have to turn off "HDR", "Chromatic Aberration" and "Wind Impulse" if your catches are inconsistent
 - Thanks to _kreken, leopoldprime, .spawnova, Ahdem and savageplayz for helping me out during testing!
 ## For support join here: [Destiny 2 - Macros, Scripts and Kisses](https://discord.gg/KGyjysA5WY)
-## Preview image:
-![Example of use with GUI menu/overlay displayed](https://i.imgur.com/EOuRKdb.jpg)
-_Screenshot showing the GUI menu and overlay while fishing_
