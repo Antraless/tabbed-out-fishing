@@ -1,6 +1,3 @@
-if not A_IsAdmin {
-Run *RunAs "%A_AhkPath%" "%A_ScriptFullPath%"
-}
 #Persistent
 #SingleInstance, Force
 SetBatchLines, -1
@@ -15,9 +12,12 @@ else  {
 		msgbox,0x30,Antra's Fishing Script, Something went wrong while trying to install required files. Please join https://discord.gg/KGyjysA5WY for support.`n`nThe script will now close itself.
 	}
 	else {
-		msgbox,0x40,Antra's Fishing Script, Required files downloaded!`n`nPlease run ViGEmBus_1.21.442_x64_x86_arm64.exe to install ViGEmBus, then open this script (tabbed-out-fishing-STRIPPED) again.
+		msgbox,0x40,Antra's Fishing Script, Required files downloaded!`n`nPlease run ViGEmBus_1.21.442_x64_x86_arm64.exe to install ViGEmBus, then open this script (tabbed-out-fishing.exe) again.
 	}
 	exitapp
+}
+if not A_IsAdmin {
+Run *RunAs "%A_AhkPath%" "%A_ScriptFullPath%"
 }
 class ViGEmWrapper {
 static asm := 0
