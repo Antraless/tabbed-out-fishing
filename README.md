@@ -14,8 +14,8 @@ You have now installed the script!
 
 To tab out, use `alt+tab` after starting the script! Best of luck getting those exotics.
 # Notes
-- If you want ONLY fishing functionality, download `tabbed-out-fishing-STRIPPED.exe` or `tabbed-out-fishing-STRIPPED.ahk`.
-   * F4 to start, F3 to stop, F2 to close.
+- If you want ONLY fishing functionality, download `tabbed-out-fishing-STRIPPED.ahk`
+   * Binds are: F4 to start, F3 to stop, F2 to close.
    * You must be brightness 7 for the stripped script. It contains no anti-afk, rebinding, overlay, tracking, auto-pickup, etc. - Just fishing!
 - If you have a real controller plugged in, you may have to unplug it
 - The "x" that appears on screen must be visible
