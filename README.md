@@ -1,5 +1,5 @@
 This script fishes for you even when not tabbed in; so you may use your pc as normal(ish) while fishing!
-# How to install (do this first!)
+# How to install
 1. Download the script [here](https://antraless.github.io/tabbed-out-fishing/tabbed-out-fishing.ahk)
 2. Run the script (requires AHK 1.1: https://www.autohotkey.com/download/ahk-install.exe)
 3. Follow the instructions that pop up once you run the script! *There may be no instructions if you have used another one of my scripts previously*
